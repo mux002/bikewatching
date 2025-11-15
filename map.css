@@ -15,3 +15,49 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for effect */
   border-radius: 8px; /* Optional: rounded corners */
 }
+
+#map svg {
+    position: absolute;
+    inset: 0;       
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none
+}
+
+#map svg circle {
+    fill: steelblue;
+    fill-opacity: 0.6;   /* experiment: 0.4–0.7 */
+    stroke: white;
+    stroke-width: 1px;
+    pointer-events: auto
+}
+
+.toolbar {
+    display: flex;
+    align-items: baseline;
+    gap: 1em;
+    margin-block: 0.5rem 1rem;
+}
+
+.time-filter {
+    margin-left: auto;
+    display: inline-flex;
+    flex-direction: row; 
+    gap: 0.25rem;
+}
+
+.time-filter .block {
+    display: block;
+}
+
+#anytime {
+    color: color-mix(in oklch, CanvasText 40%, Canvas 60%);
+    font-style: italic;
+}
+
+#time-slider {
+    width: min(36ch, 80vw);
+}
+
+
