@@ -20,12 +20,18 @@
             <label class="time-filter">
                 Filter by time:
                 <input id="time-slider" type="range" min="-1" max="1440" step="1" value="-1" />
-                <time id="time-readout" datetime="" class="block"></time>
-                <em id="anytime" class="block">(any time)</em>
+                <time id="selected-time" datetime="" class="block"></time>
+                <em id="any-time" class="block">(any time)</em>
             </label>
         </header>
         <div id="map">
             <svg></svg>
+        </div>
+        <div class="legend legend-flow" aria-label="Traffic flow legend">
+            <span class="legend-title">Legend:</span>
+            <div class="legend-item" style="--departure-ratio: 1"><span class="label">More departures</span></div>
+            <div class="legend-item" style="--departure-ratio: 0.5"><span class="label">Balanced</span></div>
+            <div class="legend-item" style="--departure-ratio: 0"><span class="label">More arrivals</span></div>
         </div>
     </body>
 </html>
